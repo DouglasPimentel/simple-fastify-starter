@@ -1,5 +1,5 @@
-const dotenv = require("dotenv");
-const server = require("./app")({
+const dotenv = require('dotenv');
+const server = require('./app')({
   logger: true,
 });
 
