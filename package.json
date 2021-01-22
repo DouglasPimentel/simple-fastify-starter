@@ -5,7 +5,7 @@
   "main": "src/server.js",
   "scripts": {
     "start": "node src/server.js",
-    "dev": "nodemon src/server.js",
+    "dev": "nodemon",
     "test": "jest",
     "test:watch": "jest --watchAll",
     "lint": "eslint"
@@ -17,7 +17,7 @@
   "author": "Douglas Pimentel <dev.pimentel@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "dotenv": "^8.2.0",
+    "dotenv": "8.2.0",
     "fastify": "^3.9.2"
   },
   "devDependencies": {
@@ -28,6 +28,7 @@
     "eslint-plugin-prettier": "3.3.0",
     "jest": "26.6.3",
     "nodemon": "^2.0.6",
-    "prettier": "2.2.1"
+    "prettier": "2.2.1",
+    "sucrase": "3.17.0"
   }
 }
