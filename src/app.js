@@ -1,13 +1,12 @@
 const fastify = require('fastify');
+const root = require('./routes/root');
 
-const build = (opts = {}) => {
+const createApp = (opts = {}) => {
   const app = fastify(opts);
 
-  app.get('/', (request, reply) => {
-    reply.send({ message: 'Hello World!' });
-  });
+  app.register(root);
 
   return app;
 };
 
-module.exports = build;
+module.exports = createApp;
