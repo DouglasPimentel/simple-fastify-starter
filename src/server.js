@@ -1,6 +1,9 @@
 const dotenv = require('dotenv');
 const server = require('./app')({
-  logger: true,
+  logger: {
+    level: 'info',
+    prettyPrint: true,
+  },
 });
 
 dotenv.config();
@@ -9,9 +12,9 @@ const PORT = process.env.PORT || 3000;
 
 server.listen(PORT, (err, address) => {
   if (err) {
-    console.log(err);
+    server.log.error(err);
     process.exit(1);
   }
 
-  console.log(`server running on ${address}`);
+  server.log.info(`server running on ${address}`);
 });
